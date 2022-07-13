@@ -180,8 +180,6 @@ const generateRandomQuote = () => {
     const getRandomQuote = matchedQuotes[randomIndex(matchedQuotes)];
   
     console.log(`${getRandomQuote.quote} - ${getRandomQuote.character}, on the topic of ${getRandomQuote.topic}.`);
-  
-  
 };
 
 generateRandomQuote();
