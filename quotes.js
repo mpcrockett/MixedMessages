@@ -154,12 +154,12 @@ const quotes = [
         character: "Chandler",
         topic: "travel",
         quote: "Well, then I guess I'm going to Yemen. I'm going to Yemen. (to an elderly woman in line) When we get to Yemen, can I stay with you?"
-    }
+    },
     {
         character: "Chandler",
         topic: "wisdom",
         quote: "Hi, I’m Chandler. I make jokes when I’m uncomfortable."
     },
     
-];
-
+    ];
+    exports.quotes = quotes;
