@@ -4,21 +4,31 @@ const randomIndex = (array) => {
    return Math.floor(Math.random() * array.length);
 };
 
-const characters = () => {
-    let array = [];
-    quoteArray.forEach(entry => { 
-        if (!array.includes(entry.character)) {
-        array.push(entry.character)
-      }
-    });
-    return array;
-  };
+// const characters = () => {
+//     let array = [];
+//     quoteArray.forEach(entry => { 
+//         if (!array.includes(entry.character)) {
+//         array.push(entry.character)
+//       }
+//     });
+//     return array;
+//   };
 
-const topics = () => {
+// const topics = () => {
+//     let array = [];
+//     quoteArray.forEach(entry => { 
+//         if (!array.includes(entry.topic)) {
+//         array.push(entry.topic)
+//       }
+//     });
+//     return array;
+//   };
+
+  const valueArray = (x) => {
     let array = [];
     quoteArray.forEach(entry => { 
-        if (!array.includes(entry.topic)) {
-        array.push(entry.topic)
+        if (!array.includes(entry[x])) {
+        array.push(entry[x])
       }
     });
     return array;
@@ -26,9 +36,9 @@ const topics = () => {
 
 const generateRandomQuote = () => {
 
-   const randomCharacter = characters()[randomIndex(characters())];
+   const randomCharacter = valueArray("character")[randomIndex(valueArray("character"))];
 
-   const randomTopic = topics()[randomIndex(topics())];
+   const randomTopic = valueArray("topic")[randomIndex(valueArray("topic"))];
   
    const matchedQuotes = quoteArray.filter(object => object.character == randomCharacter && object.topic == randomTopic);  
   
