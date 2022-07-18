@@ -4,35 +4,15 @@ const randomIndex = (array) => {
    return Math.floor(Math.random() * array.length);
 };
 
-// const characters = () => {
-//     let array = [];
-//     quoteArray.forEach(entry => { 
-//         if (!array.includes(entry.character)) {
-//         array.push(entry.character)
-//       }
-//     });
-//     return array;
-//   };
-
-// const topics = () => {
-//     let array = [];
-//     quoteArray.forEach(entry => { 
-//         if (!array.includes(entry.topic)) {
-//         array.push(entry.topic)
-//       }
-//     });
-//     return array;
-//   };
-
-  const valueArray = (x) => {
-    let array = [];
-    quoteArray.forEach(entry => { 
-        if (!array.includes(entry[x])) {
-        array.push(entry[x])
+const valueArray = (x) => {
+   let array = [];
+   quoteArray.forEach(entry => { 
+     if (!array.includes(entry[x])) {
+       array.push(entry[x])
       }
     });
     return array;
-  };
+    };
 
 const generateRandomQuote = () => {
 
